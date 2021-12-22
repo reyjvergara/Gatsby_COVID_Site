@@ -34,6 +34,8 @@ const IndexPage = () => {
     }
 
     const { data = [] } = response;
+  } // added this brace
+  /*
     const hasData = Array.isArray(data) && data.length > 0;
 
     if (!hasData) return;
@@ -93,7 +95,7 @@ const IndexPage = () => {
     });
     geoJsonLayers.addTo(map);
   }
-
+*/
   const mapSettings = {
     center: CENTER,
     defaultBaseMap: "OpenStreetMap",
