@@ -82,45 +82,41 @@ const MapEffect = ({ markerRef }) => {
 };
 */
 
-async function MapEffect({leafletElement: map } = {}) {
-
-}
-
 const IndexPage = () => {
-  const { data: countries = [] } = useTracker({
-    api: 'countries'
-  });
-  
-  const hasCountries = Array.isArray(countries) && countries.length > 0;
+  const markerRef = useRef();
 
+  /**
+   * mapEffect
+   * @description Fires a callback once the page renders
+   * @example Here this is and example of being used to zoom in and set a popup on load
+   */
+
+  async function mapEffect({ leafletElement: map } = {}) {
+  }
 
   const mapSettings = {
     center: CENTER,
-    defaultBaseMap: "OpenStreetMap",
+    defaultBaseMap: 'OpenStreetMap',
     zoom: DEFAULT_ZOOM,
+    mapEffect
   };
-
   return (
     <Layout pageName="home">
       <Helmet>
         <title>Home Page</title>
       </Helmet>
 
-      <Map {...mapSettings}>
-        <MapEffect markerRef={markerRef} />
-        <Marker ref={markerRef} position={CENTER} />
-      </Map>
+      <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
-        <h2>I want to remove this line</h2>
+        <h2>Still Getting Started?</h2>
         <p>Run the following in your terminal!</p>
-        <Snippet>https://pedantic-leavitt-abc687.netlify.app/</Snippet>
-        <p className="note">
-          Note: Gatsby CLI required globally for the above command
-        </p>
+        <pre>
+          <code>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</code>
+        </pre>
+        <p className="note">Note: Gatsby CLI required globally for the above command</p>
       </Container>
     </Layout>
   );
 };
-
 export default IndexPage;
