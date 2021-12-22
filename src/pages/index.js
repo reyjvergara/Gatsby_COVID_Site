@@ -9,10 +9,6 @@ import axios from "axios";
 // this is from our hooks in src index
 import { useTracker } from "hooks";
 
-//import gatsby_astronaut from "assets/images/gatsby-astronaut.jpg";
-//import { Marker, useMap } from "react-leaflet";
-//import { promiseToFlyTo, getCurrentLocation } from "lib/map";
-
 const LOCATION = {
   lat: 38.9072,
   lng: -77.0369,
@@ -36,9 +32,12 @@ const IndexPage = () => {
       console.log("Failed to fetch countries: ${e.message}", e);
       return;
     }
+
     const { data = [] } = response;
     const hasData = Array.isArray(data) && data.length > 0;
+
     if (!hasData) return;
+
     const geoJson = {
       type: "FeatureCollection",
       features: data.map((country = {}) => {
