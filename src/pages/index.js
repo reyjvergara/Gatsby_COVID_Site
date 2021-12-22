@@ -29,7 +29,7 @@ const IndexPage = () => {
 
   async function mapEffect({ leafletElement: map } = {}) {
     let response;
-
+    // add this comment
     try {
       response = await axios.get("https://corona.lmao.ninja/v2/countries");
     } catch (e) {
