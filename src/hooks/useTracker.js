@@ -1,6 +1,3 @@
-// new file src/hooks/useTracker.js
-// this will be empty for now
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 
