@@ -32,7 +32,7 @@ const popupContentGatsby = `
     </div>
     <div class="popup-gatsby-content">
       <h1>Gatsby Leaflet Starter</h1>
-      <p>Welcome to your new Gatsby site. Now go build something great!</p>
+      <p>I changed the text of this site!</p>
     </div>
   </div>
 `;
