@@ -34,8 +34,6 @@ const IndexPage = () => {
     }
 
     const { data = [] } = response;
-  } // added this brace
-  /*
     const hasData = Array.isArray(data) && data.length > 0;
 
     if (!hasData) return;
@@ -57,6 +55,7 @@ const IndexPage = () => {
         };
       }),
     };
+  } /*
     const geoJsonLayers = new L.GeoJSON(geoJson, {
       pointToLayer: (feature = {}, latlng) => {
         const { properties = {} } = feature;
