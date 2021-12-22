@@ -83,8 +83,7 @@ const MapEffect = ({ markerRef }) => {
 */
 
 const IndexPage = () => {
-  const markerRef = useRef();
-
+  
   /**
    * mapEffect
    * @description Fires a callback once the page renders
