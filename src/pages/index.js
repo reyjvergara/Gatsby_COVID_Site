@@ -1,13 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import Helmet from "react-helmet";
 import L from "leaflet";
+import axios from "axios";
 import Layout from "components/Layout";
 import Container from "components/Container";
 import Map from "components/Map";
 import Snippet from "components/Snippet";
-import axios from "axios";
+
 // this is from our hooks in src index
-import { useTracker } from "hooks";
+//import { useTracker } from "hooks";
 
 const LOCATION = {
   lat: 38.9072,
@@ -55,7 +56,8 @@ const IndexPage = () => {
         };
       }),
     };
-  } /*
+  }
+  /*
     const geoJsonLayers = new L.GeoJSON(geoJson, {
       pointToLayer: (feature = {}, latlng) => {
         const { properties = {} } = feature;
@@ -118,9 +120,7 @@ const IndexPage = () => {
             https://github.com/colbyfayock/gatsby-starter-leaflet
           </code>
         </pre>
-        <p className="note">
-          Note: Gatsby CLI required globally for the above command
-        </p>
+        <p className="note">Note: I changed this to see if it changed</p>
       </Container>
     </Layout>
   );
